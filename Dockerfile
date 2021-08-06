@@ -30,6 +30,8 @@ RUN docker-php-ext-configure gd \
     --with-freetype
 
 RUN docker-php-ext-install gd pdo pdo_mysql
+RUN docker-php-ext-configure opcache --enable-opcache \
+    && docker-php-ext-install opcache
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --1 \
