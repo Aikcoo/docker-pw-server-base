@@ -21,12 +21,11 @@ RUN apt-get update \
 
 RUN docker-php-ext-configure gd \
     --with-gd \
-    --with-webp-dir \
-    --with-jpeg-dir \
-    --with-png-dir \
-    --with-zlib-dir \
-    --with-xpm-dir \
-    --with-freetype-dir \
+    --with-webp \
+    --with-jpeg \
+    --with-png \
+    --with-zlib \
+    --with-xpm \
     --with-freetype
 
 RUN docker-php-ext-install gd pdo pdo_mysql
