@@ -27,7 +27,7 @@ RUN docker-php-ext-configure gd \
     --with-xpm-dir \
     --with-freetype-dir
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install gd pdo pdo_mysql
 RUN docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache
 
