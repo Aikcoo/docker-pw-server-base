@@ -1,4 +1,4 @@
-FROM php:7.1-apache
+FROM php:7.4-apache
 
 RUN pecl install -o -f redis-4.3.0 \
     && rm -rf /tmp/pear \
