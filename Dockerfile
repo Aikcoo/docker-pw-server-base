@@ -20,11 +20,8 @@ RUN apt-get update \
     && docker-php-ext-install -j$(nproc) gd
 
 RUN docker-php-ext-configure gd \
-    --with-gd \
     --with-webp \
     --with-jpeg \
-    --with-png \
-    --with-zlib \
     --with-xpm \
     --with-freetype
 
