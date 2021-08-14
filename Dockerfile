@@ -20,9 +20,13 @@ RUN apt-get update \
     && docker-php-ext-install -j$(nproc) gd
 
 RUN docker-php-ext-configure gd \
-    --with-webp \
-    --with-jpeg \
-    --with-xpm \
+    --with-gd \
+    --with-webp-dir \
+    --with-jpeg-dir \
+    --with-png-dir \
+    --with-zlib-dir \
+    --with-xpm-dir \
+    --with-freetype-dir \
     --with-freetype
 
 RUN docker-php-ext-install gd pdo pdo_mysql
