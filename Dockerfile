@@ -25,8 +25,7 @@ RUN docker-php-ext-configure gd \
     --with-png-dir \
     --with-zlib-dir \
     --with-xpm-dir \
-    --with-freetype-dir \
-    --with-freetype
+    --with-freetype-dir
 
 RUN docker-php-ext-install pdo pdo_mysql
 RUN docker-php-ext-configure opcache --enable-opcache \
