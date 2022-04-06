@@ -35,3 +35,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --1 \
     && rm -rf composer-setup.php \
     && mv composer.phar /usr/local/bin/composer
+    
+RUN mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+
