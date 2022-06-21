@@ -15,6 +15,7 @@ RUN apt-get update \
         libpng-dev libxpm-dev \
         libfreetype6-dev \
         git \
+        vim \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install -j$(nproc) gd
 
